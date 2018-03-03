@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple Weather App</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.4.7.0.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script type="text/javascript" src="js/reqwest.min.js"></script>
+</head>
+<body>
+
+<header>
+	<div class="text-center">
+		<h1 class="text-primary">Simple Weather App</h1> 
+		<hr class="hr">
+	</div>
+</header>
+<br>
+
+
+<div class="container">
+
+	<div class="col-sm-12">
+		
+		<div class="row">
+			<div class="col-sm-offset-2 col-sm-8">
+				<div class="input-group">
+					<span class="input-group-addon">Search </span>
+					<input type="text" id="city-input" class="form-control" placeholder="enter city name">
+					<div class="input-group-btn">
+						<button class="btn btn-default btn-success" id="search-btn" type="button" onclick="search()"><i class="glyphicon glyphicon-search"></i></button>
+						<button class="btn btn-primary" type="button" onclick="locate()"><span class="glyphicon glyphicon-map-marker"></span> Locate Me</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br><br><br>
+
+		<div class="row">
+			<div class="col-sm-12 text-center location">
+				<span id="location">City Name</span>, <span id="country">Country</span> 
+			</div>
+		</div>
+
+		<div class="row">
+			<div id="temperature" class="temperature text-center">0</div>
+		</div>
+
+		<div class="row">
+			<div id="description" class="col-sm-12 text-center size-2em">Weather condition</div>
+		</div>
+		<br>
+
+		<div class="row">
+			<div class="col-sm-12 text-center size-2em">
+				<span class="glyphicon glyphicon-tint text-primary"></span> Humidity: <span id="humidity">0</span>% &nbsp;&nbsp;&nbsp;&nbsp; <span class="glyphicon glyphicon-send text-success"></span> Wind: <span id="wind">0</span> km/h <span id="direction">S</span>
+			</div>
+		</div>
+		<br>
+
+		<div class="row">
+			<div class="col-sm-12 text-center">
+				<button class="btn btn-sm" onclick="toCelsius()">&deg;C</button> &nbsp; | &nbsp; <button class="btn btn-sm" onclick="toFahrenheit()">&deg;F</button>
+			</div>
+		</div>
+
+	</div>
+
+
+</div>
+
+
+
+
+
+
+<br><hr>
+<footer class="row size-2em">
+	<div class="container">
+
+		<div class="col-sm-6 text-center">
+			<a class="ifacebook" href="https://www.facebook.com/muhammad.nahid.90" target="_blank"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a> &nbsp;&nbsp;
+
+			<a class="itwitter" href="https://twitter.com/mdnahid22" target="_blank"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a> &nbsp;&nbsp;
+
+			<a class="igithub" href="https://github.com/nahid111" target="_blank"><i class="fa fa-github-square fa-2x" aria-hidden="true"></i></a> &nbsp;&nbsp;
+
+			<a class="igoogle-plus" href="https://plus.google.com/111263148983421762268?hl=en" target="_blank"><i class="fa fa-google-plus-square fa-2x" aria-hidden="true"></i></a> &nbsp;&nbsp;
+
+			<a class="ilinkedin" href="https://www.linkedin.com/in/muhammad-nahid-371a5180/" target="_blank"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a> &nbsp;&nbsp;
+		</div>
+
+		<div class="col-sm-6 text-center">
+			<span class="text-success">Powered by - </span> <a class="poweredBy" href="http://openweathermap.org" target="_blank">openweathermap.org</a>
+		</div>
+
+	</div>
+
+</footer>
+
+
+<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>
+
+
